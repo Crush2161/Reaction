@@ -1,0 +1,225 @@
+[29-Jun-25 17:40:31 - INFO] - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.114.124:8000
+[29-Jun-25 17:40:31 - INFO] - werkzeug - [33mPress CTRL+C to quit[0m
+[29-Jun-25 17:42:11 - INFO] - PratikBots - @CrushReaction_Bot Started, please start the bot from owner id.
+[29-Jun-25 17:42:11 - INFO] - root - Restarting all cloned bots...
+[29-Jun-25 17:42:41 - ERROR] - root - Error while restarting bots.
+Traceback (most recent call last):
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\PratikBots\modules\Clone.py", line 173, in restart_bots
+    bots = [bot async for bot in clonebotdb.find()]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\motor\core.py", line 1425, in next
+    if self.alive and (self._buffer_size() or await self._get_more()):
+                                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adepr\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1208, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\cursor.py", line 1102, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1917, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1993, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 68612d373ab1cfe95d336789, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+[29-Jun-25 17:42:41 - ERROR] - PratikBots - localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 68612d373ab1cfe95d336789, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+[29-Jun-25 17:42:41 - INFO] - PratikBots - Successfully imported : Callback
+[29-Jun-25 17:42:41 - INFO] - PratikBots - Successfully imported : Clone
+[29-Jun-25 17:42:41 - INFO] - PratikBots - Successfully imported : Gcast
+[29-Jun-25 17:42:41 - INFO] - PratikBots - Successfully imported : Must_join
+[29-Jun-25 17:42:41 - INFO] - PratikBots - Successfully imported : Ping
+[29-Jun-25 17:42:42 - INFO] - PratikBots - Successfully imported : Start
+[29-Jun-25 17:42:42 - INFO] - PratikBots - Successfully imported : Stats
+[29-Jun-25 17:42:42 - INFO] - PratikBots - Successfully imported : ~reaction
+[29-Jun-25 17:42:42 - INFO] - PratikBots - Bot commands set successfully.
+[29-Jun-25 17:42:42 - INFO] - PratikBots - @CrushReaction_Bot Started.
+[29-Jun-25 17:43:33 - ERROR] - pyrogram.dispatcher - Telegram says: [400 BOT_METHOD_INVALID] - The method can't be used by bots (caused by "messages.SendReaction")
+Traceback (most recent call last):
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\Abg\patch\listen\listen.py", line 236, in resolve_future
+    await self.registered_handler(client, message, *args)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\PratikBots\modules\~reaction.py", line 13, in react_to_message
+    await message.react(emoji)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\types\messages_and_media\message.py", line 3374, in react
+    return await self._client.send_reaction(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\methods\messages\send_reaction.py", line 64, in send_reaction
+    await self.invoke(
+    ...<6 lines>...
+    )
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\methods\advanced\invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\session\session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\session\session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\errors\rpc_error.py", line 91, in raise_it
+    raise getattr(
+    ...<5 lines>...
+      is_signed=is_signed)
+pyrogram.errors.exceptions.bad_request_400.BotMethodInvalid: Telegram says: [400 BOT_METHOD_INVALID] - The method can't be used by bots (caused by "messages.SendReaction")
+[29-Jun-25 17:44:29 - ERROR] - pyrogram.dispatcher - Telegram says: [400 BOT_METHOD_INVALID] - The method can't be used by bots (caused by "messages.SendReaction")
+Traceback (most recent call last):
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\Abg\patch\listen\listen.py", line 236, in resolve_future
+    await self.registered_handler(client, message, *args)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\PratikBots\modules\~reaction.py", line 13, in react_to_message
+    await message.react(emoji)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\types\messages_and_media\message.py", line 3374, in react
+    return await self._client.send_reaction(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\methods\messages\send_reaction.py", line 64, in send_reaction
+    await self.invoke(
+    ...<6 lines>...
+    )
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\methods\advanced\invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\session\session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\session\session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\errors\rpc_error.py", line 91, in raise_it
+    raise getattr(
+    ...<5 lines>...
+      is_signed=is_signed)
+pyrogram.errors.exceptions.bad_request_400.BotMethodInvalid: Telegram says: [400 BOT_METHOD_INVALID] - The method can't be used by bots (caused by "messages.SendReaction")
+[29-Jun-25 17:49:28 - INFO] - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.114.124:8000
+[29-Jun-25 17:49:28 - INFO] - werkzeug - [33mPress CTRL+C to quit[0m
+[29-Jun-25 17:49:37 - INFO] - root - Restarting all cloned bots...
+[29-Jun-25 17:49:37 - ERROR] - PratikBots - 'bot_id'
+[29-Jun-25 17:49:37 - INFO] - PratikBots - Successfully imported : Callback
+[29-Jun-25 17:49:37 - INFO] - PratikBots - Successfully imported : Clone
+[29-Jun-25 17:49:37 - INFO] - PratikBots - Successfully imported : Gcast
+[29-Jun-25 17:49:37 - INFO] - PratikBots - Successfully imported : Must_join
+[29-Jun-25 17:49:37 - INFO] - PratikBots - Successfully imported : Ping
+[29-Jun-25 17:49:37 - INFO] - PratikBots - Successfully imported : Start
+[29-Jun-25 17:49:37 - INFO] - PratikBots - Successfully imported : Stats
+[29-Jun-25 17:49:37 - INFO] - PratikBots - Successfully imported : ~reaction
+[29-Jun-25 17:49:38 - INFO] - PratikBots - Bot commands set successfully.
+[29-Jun-25 17:49:38 - INFO] - PratikBots - @CrushReaction_Bot Started.
+[29-Jun-25 17:50:09 - ERROR] - pyrogram.dispatcher - Telegram says: [400 BOT_METHOD_INVALID] - The method can't be used by bots (caused by "messages.SendReaction")
+Traceback (most recent call last):
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\Abg\patch\listen\listen.py", line 236, in resolve_future
+    await self.registered_handler(client, message, *args)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\PratikBots\modules\~reaction.py", line 13, in react_to_message
+    await message.react(emoji)
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\types\messages_and_media\message.py", line 3374, in react
+    return await self._client.send_reaction(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\methods\messages\send_reaction.py", line 64, in send_reaction
+    await self.invoke(
+    ...<6 lines>...
+    )
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\methods\advanced\invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\session\session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\session\session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adepr\Downloads\REACTION_BOT-main\REACTIONBOT-main\.venv\Lib\site-packages\pyrogram\errors\rpc_error.py", line 91, in raise_it
+    raise getattr(
+    ...<5 lines>...
+      is_signed=is_signed)
+pyrogram.errors.exceptions.bad_request_400.BotMethodInvalid: Telegram says: [400 BOT_METHOD_INVALID] - The method can't be used by bots (caused by "messages.SendReaction")
