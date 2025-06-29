@@ -27,7 +27,7 @@ async def start_message(client: Client, message: Message):
     await client.send_photo(
         chat_id=message.chat.id,
         photo=photo_url,
-        caption=f"**✦ » ʜᴇʏ {message.from_user.mention}!**\n**✦ ɪ'ᴍ ʏᴏᴜʀ ᴀᴜᴛᴏ ʀᴇᴀᴄᴛɪᴏɴ ʙᴏᴛ !!**\n\n**◆ ɪ'ᴍ ʀᴇᴀᴄᴛ ᴛᴏ ᴇᴠᴇʀʏ ᴍᴇssᴀɢᴇ ɪɴ ɢʀᴏᴜᴘs, ᴄʜᴀɴɴᴇʟs, ᴀɴᴅ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs ᴡɪᴛʜ ᴀ ʀᴀɴᴅᴏᴍ ᴇᴍᴏᴊɪ..!!**\n\n**✦ 𝖶ɪᴛʜ /clone ᴀɴᴅ /broadcast ғᴇᴀᴛᴜʀᴇs.**\n\n**✦ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](t.me/ll_ALPHA_BABY_lll)**",
+        caption=f"**✦ » ʜᴇʏ {message.from_user.mention}!**\n**✦ ɪ'ᴍ ʏᴏᴜʀ ᴀᴜᴛᴏ ʀᴇᴀᴄᴛɪᴏɴ ʙᴏᴛ !!**\n\n**◆ ɪ'ᴍ ʀᴇᴀᴄᴛ ᴛᴏ ᴇᴠᴇʀʏ ᴍᴇssᴀɢᴇ ɪɴ ɢʀᴏᴜᴘs, ᴄʜᴀɴɴᴇʟs, ᴀɴᴅ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs ᴡɪᴛʜ ᴀ ʀᴀɴᴅᴏᴍ ᴇᴍᴏᴊɪ..!!**\n\n**✦ 𝖶ɪᴛʜ /clone ᴀɴᴅ /broadcast ғᴇᴀᴛᴜʀᴇs.**\n\n**✦ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [ғᴏʀᴇᴠᴇʀ ᴄʀᴜsʜ](t.me/FOREVER_CRUSH)**",
         reply_markup=InlineKeyboardMarkup(buttons)
     )
     
