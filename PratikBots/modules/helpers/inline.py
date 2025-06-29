@@ -5,18 +5,16 @@ from PratikBots import OWNER, PratikBots
 
 
 START_BOT = [
-    
     [
         InlineKeyboardButton(text="⌯ ❍ᴘᴇɴ 𝖢ᴏϻϻᴧηᴅs ⌯", callback_data="HELP"),
     ],
 ]
 
-
 DEV_OP = [
-        [InlineKeyboardButton("✙ ʌᴅᴅ ϻє ʙᴀʙу ✙", url=f"http://t.me/{PratikBots.username}?startgroup=botstart")],
-        [InlineKeyboardButton("⌯ 𝛅ᴜᴘᴘᴏʀᴛ ⌯", url="https://t.me/CRUSH_FOREVER"),
-         InlineKeyboardButton("⌯ 𝖴ᴘᴅᴀᴛᴇs ⌯", url="https://t.me/+Rv1BIrd2MsgxMWVl")],
-        [InlineKeyboardButton("⌯ 𝖧ᴇʟᴘ ᴧηᴅ 𝖢ᴏϻϻᴧηᴅs ⌯", callback_data="HELP")]
+    [InlineKeyboardButton("✙ ʌᴅᴅ ϻє ʙᴀʙу ✙", url=f"http://t.me/{PratikBots.username}?startgroup=botstart")],
+    [InlineKeyboardButton("⌯ 𝛅ᴜᴘᴘᴏʀᴛ ⌯", url="https://t.me/CRUSH_FOREVER"),
+     InlineKeyboardButton("⌯ 𝖴ᴘᴅᴀᴛᴇs ⌯", url="https://t.me/+Rv1BIrd2MsgxMWVl")],
+    [InlineKeyboardButton("⌯ 𝖧ᴇʟᴘ ᴧηᴅ 𝖢ᴏϻϻᴧηᴅs ⌯", callback_data="HELP")]
 ]
 
 PNG_BTN = [
@@ -24,20 +22,15 @@ PNG_BTN = [
         InlineKeyboardButton(text="⌯ ❍ᴘᴇɴ 𝖢ᴏϻϻᴧηᴅs ⌯", callback_data="HELP"),
     ],
     [
-        InlineKeyboardButton(
-            text="⌯ ᴄʟσsє ⌯",
-            callback_data="CLOSE",
-        ),
+        InlineKeyboardButton(text="⌯ ᴄʟσsє ⌯", callback_data="CLOSE"),
     ],
 ]
-
 
 BACK = [
     [
         InlineKeyboardButton(text="⌯ 𝖡ᴧᴄᴋ ⌯", callback_data="BACK"),
     ],
 ]
-
 
 HELP_BTN = [
     [
@@ -50,13 +43,11 @@ HELP_BTN = [
     ],
 ]
 
-
 CLOSE_BTN = [
     [
         InlineKeyboardButton(text="⌯ ᴄʟσsє ⌯", callback_data="CLOSE"),
     ],
 ]
-
 
 CHATBOT_ON = [
     [
@@ -65,10 +56,9 @@ CHATBOT_ON = [
     ],
 ]
 
-
 MUSIC_BACK_BTN = [
     [
-        InlineKeyboardButton(text="⌯ 𝛅ᴏᴏɴ ⌯", callback_data=f"soom"),
+        InlineKeyboardButton(text="⌯ 𝛅ᴏᴏɴ ⌯", callback_data="soom"),
     ],
 ]
 
@@ -79,7 +69,6 @@ S_BACK = [
     ],
 ]
 
-
 CHATBOT_BACK = [
     [
         InlineKeyboardButton(text="⌯ 𝖡ᴧᴄᴋ ⌯", callback_data="CHATBOT_BACK"),
@@ -87,14 +76,12 @@ CHATBOT_BACK = [
     ],
 ]
 
-
 HELP_START = [
     [
         InlineKeyboardButton(text="⌯ 𝖧ᴇʟᴘ ᴧηᴅ 𝖢ᴏϻϻᴧηᴅs ⌯", callback_data="HELP"),
         InlineKeyboardButton(text="⌯ ᴄʟσsє ⌯", callback_data="CLOSE"),
     ],
 ]
-
 
 HELP_BUTN = [
     [
@@ -104,7 +91,6 @@ HELP_BUTN = [
         InlineKeyboardButton(text="⌯ ᴄʟσsє ⌯", callback_data="CLOSE"),
     ],
 ]
-
 
 ABOUT_BTN = [
     [
