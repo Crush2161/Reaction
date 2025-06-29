@@ -99,7 +99,7 @@ async def clone_txt(client, message):
         logging.exception("Error while cloning bot.")
         await mi.edit_text(
             f"⚠️ <b>Error:</b>\n\n<code>{e}</code>\n\n"
-            f"📩 **Forward this message to @ll_ALPHA_BABY_lll for assistance.**"
+            f"📩 **Forward this message to @FOREVER_CRUSH for assistance.**"
         )   
 
 @app.on_message(filters.command("cloned"))
