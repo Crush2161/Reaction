@@ -24,7 +24,7 @@ async def start_message(client: Client, message: Message):
     await client.send_photo(
         chat_id=message.chat.id,
         photo=photo_url,
-        caption=f"**✦ʜᴇʏ {message.from_user.mention}!!**\n**◆ ɪ'ᴍ ʏᴏᴜʀ ᴄʟᴏɴᴇᴅ ᴀᴜᴛᴏ ʀᴇᴀᴄᴛɪᴏɴ ʙᴏᴛ !!**\n\n**◆ ɪ'ᴍ ʀᴇᴀᴄᴛ ᴛᴏ ᴇᴠᴇʀʏ ᴍᴇssᴀɢᴇ ɪɴ ɢʀᴏᴜᴘs, ᴄʜᴀɴɴᴇʟs, ᴀɴᴅ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs ᴡɪᴛʜ ᴀ ʀᴀɴᴅᴏᴍ ᴇᴍᴏᴊɪ..!!**\n\n**◆ 𝖦ᴏ & 𝖢ʟᴏɴᴇ 𝖸ᴏᴜʀ 𝖮ᴡɴ 𝖡ᴏᴛ :-\n     @TPB_REACTION_BOT**",
+        caption=f"**✦ʜᴇʏ {message.from_user.mention}!!**\n**◆ ɪ'ᴍ ʏᴏᴜʀ ᴄʟᴏɴᴇᴅ ᴀᴜᴛᴏ ʀᴇᴀᴄᴛɪᴏɴ ʙᴏᴛ !!**\n\n**◆ ɪ'ᴍ ʀᴇᴀᴄᴛ ᴛᴏ ᴇᴠᴇʀʏ ᴍᴇssᴀɢᴇ ɪɴ ɢʀᴏᴜᴘs, ᴄʜᴀɴɴᴇʟs, ᴀɴᴅ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs ᴡɪᴛʜ ᴀ ʀᴀɴᴅᴏᴍ ᴇᴍᴏᴊɪ..!!**\n\n**◆ 𝖦ᴏ & 𝖢ʟᴏɴᴇ 𝖸ᴏᴜʀ 𝖮ᴡɴ 𝖡ᴏᴛ :-\n     @CrushReaction_Bot**",
         reply_markup=InlineKeyboardMarkup(buttons)
     )
     
